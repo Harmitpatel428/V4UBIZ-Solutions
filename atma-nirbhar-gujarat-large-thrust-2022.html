@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atma Nirbhar Gujarat Scheme for MSMEs 2022 | V4U</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(120deg, #f7f8fa 0%, #edeaff 100%);
+      color: #23233c;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2.5rem auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(80, 80, 120, 0.08);
+      padding: 2.5rem 2rem 2rem 2rem;
+      position: relative;
+      z-index: 1;
+      animation: fadeSlideIn 1.1s cubic-bezier(0.77,0,0.18,1);
+    }
+    .container > * {
+      position: relative;
+      z-index: 1;
+    }
+    h1 {
+      color: #6c47ff;
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      text-align: center;
+    }
+    .subtitle {
+      color: #4b2fcf;
+      font-size: 1.05rem;
+      text-align: center;
+      margin-bottom: 1.8rem;
+    }
+    .section-title {
+      color: #6c47ff;
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-top: 1.8rem;
+      margin-bottom: 0.8rem;
+      border-left: 4px solid #6c47ff;
+      padding-left: 0.8rem;
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .section-title:hover {
+      color: #fff;
+      background: #6c47ff;
+      box-shadow: 0 2px 12px rgba(108, 71, 255, 0.08);
+      border-left: 4px solid #20b2aa;
+      padding-left: 1.2rem;
+      transform: scale(1.03);
+    }
+    ul, ol {
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+    }
+    li {
+      margin-bottom: 0.4rem;
+      line-height: 1.5;
+    }
+    .highlight {
+      background: #edeaff;
+      border-radius: 6px;
+      padding: 0.4rem 0.7rem;
+      margin-bottom: 0.8rem;
+      display: inline-block;
+      color: #4b2fcf;
+      font-weight: 600;
+    }
+    .info-box {
+      background: #f7f8fa;
+      border-left: 4px solid #6c47ff;
+      border-radius: 8px;
+      padding: 0.9rem 1rem;
+      margin-bottom: 1.2rem;
+      color: #23233c;
+      font-size: 0.95rem;
+    }
+    .why-matters {
+      background: #edeaff;
+      border-radius: 8px;
+      padding: 0.9rem 1rem;
+      margin-bottom: 1.2rem;
+      color: #23233c;
+      border-left: 4px solid #20b2aa;
+      font-size: 0.95rem;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-top: 1.8rem;
+      background: #6c47ff;
+      color: #fff;
+      padding: 0.6rem 1.3rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .back-btn:hover {
+      background: #4b2fcf;
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 4px 16px rgba(108, 71, 255, 0.13);
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 1rem 0.8rem;
+        margin: 1rem;
+      }
+      h1 {
+        font-size: 1.2rem;
+      }
+    }
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+    /* Hero background styles */
+    .hero-bg {
+      width: 100vw;
+      min-height: 320px;
+      height: 50vh;
+      max-height: 600px;
+      background: url('Images/Industrial Image.jpg') center bottom/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+      overflow: hidden;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(24,32,48,0.38);
+      z-index: 1;
+    }
+    .hero-logo {
+      position: absolute;
+      top: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 12px rgba(44,44,80,0.18);
+      z-index: 3;
+      font-family: 'Poppins', sans-serif;
+      background: rgba(44,44,80,0.18);
+      padding: 0.2em 1.2em;
+      border-radius: 12px;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+    .hero-content h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+      color: #fff;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    }
+    .hero-content .subtitle {
+      color: #e0e0ff;
+      font-size: 1.18rem;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.13);
+    }
+    @media (max-width: 700px) {
+      .hero-bg { min-height: 180px; height: 22vh; }
+      .hero-content h1 { font-size: 1.2rem; }
+      .hero-content .subtitle { font-size: 0.98rem; }
+      .hero-logo { font-size: 1.1rem; padding: 0.15em 0.7em; top: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="hero-logo">V4UBiz Solutions</div>
+    <div class="hero-content">
+      <h1>Atma Nirbhar Gujarat Scheme for Assistance to Large and Thrust Sector 2022</h1>
+      <div class="subtitle">Empowering Gujarat's industries with financial support and incentives</div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="section-title">✅ Key Benefits</div>
+    <ol>
+      <li><b>Interest Subsidy on Loans</b>
+        <div class="info-box">
+          <strong>💸 Interest Subsidy (Scheme 1)</strong><br>
+          <strong>Quantum:</strong> Up to 7% interest subsidy on Term Loan<br>
+          <strong>Duration & Limits</strong> (based on Taluka category):
+          <ul>
+            <li><strong>Category 1 Talukas:</strong>
+              <ul>
+                <li>General Sector: Up to 1% of eFCI/year for 10 years</li>
+                <li>Thrust Sector: Up to 1.2% of eFCI/year for 10 years</li>
+              </ul>
+            </li>
+            <li><strong>Category 2 Talukas:</strong>
+              <ul>
+                <li>General Sector: Up to 1% of eFCI/year for 8 years</li>
+                <li>Thrust Sector: Up to 1% of eFCI/year for 10 years</li>
+              </ul>
+            </li>
+            <li><strong>Category 3 Talukas:</strong>
+              <ul>
+                <li>General Sector: Up to 1% of eFCI/year for 6 years</li>
+                <li>Thrust Sector: Up to 1% of eFCI/year for 8 years</li>
+              </ul>
+            </li>
+          </ul>
+          <strong>Condition:</strong> Minimum 2% interest must be borne by the enterprise.
+        </div>
+      </li>
+      <li><b>Net SGST Reimbursement</b>
+        <div class="info-box">
+          <strong>Refunds a percentage of state GST paid</strong>, based on location and sector:
+          <ul>
+            <li><strong>General sector:</strong> 80–100% (up to 7.5% of FCI/year)</li>
+            <li><strong>Thrust sector:</strong> 80–100% (up to 8% of FCI/year)</li>
+          </ul>
+          <strong>Duration:</strong> Applies for up to 10 years.
+        </div>
+      </li>
+      <li><b>EPF Reimbursement</b>
+        <div class="info-box">
+          <strong>Covers employer's PF contribution</strong> (typically up to ₹1,800/month per employee) for <strong>10 years</strong>.
+        </div>
+      </li>
+      <li><b>Electricity Duty Exemption</b>
+        <div class="info-box">
+          <strong>No electricity duty</strong> for <strong>5 years</strong> on eligible units.
+        </div>
+      </li>
+    </ol>
+    <div class="section-title">🎯 Who It Applies To</div>
+    <ul>
+      <li>Large industries with investments over ₹50 cr.</li>
+      <li>Thrust sector industries (50+ sectors like biotech, medical devices, green hydrogen, EVs, auto components, electronics, textiles, food‑processing, gems & jewelry, pharmaceuticals, etc.)</li>
+      <li>Separate tracks for mega-industries (₹2,500 cr+ investment, 2,500+ employees), offering extended benefits like stamp-duty waivers and SGST refunds for up to 20 years.</li>
+    </ul>
+    <div class="section-title">📈 Why It Matters</div>
+    <div class="why-matters">
+      <ul>
+        <li>Helps attract ₹12.5 trillion in investments, generating 15 lakh jobs.</li>
+        <li>Encourages clean manufacturing, green energy, and export-linked industries.</li>
+        <li>Supports Gujarat's long-term goal of being self-reliant and industrially resilient under the "Aatmanirbhar Bharat" vision.</li>
+      </ul>
+    </div>
+    <a href="index.html" class="back-btn">&#8592; Back to Home</a>
+  </div>
+</body>
+</html> 

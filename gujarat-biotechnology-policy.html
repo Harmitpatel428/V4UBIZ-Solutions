@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gujarat Biotechnology Policy | V4U</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(120deg, #f7f8fa 0%, #edeaff 100%);
+      color: #23233c;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+    .hero-bg {
+      width: 100vw;
+      min-height: 320px;
+      height: 50vh;
+      max-height: 600px;
+      background: url('Images/Biotechnology .jpg') center center/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+      overflow: hidden;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(24,32,48,0.38);
+      z-index: 1;
+    }
+    .hero-logo {
+      position: absolute;
+      top: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 12px rgba(44,44,80,0.18);
+      z-index: 3;
+      font-family: 'Poppins', sans-serif;
+      background: rgba(44,44,80,0.18);
+      padding: 0.2em 1.2em;
+      border-radius: 12px;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 0 2vw;
+    }
+    .hero-content h1 {
+      font-size: 2.2rem;
+      word-break: break-word;
+      max-width: 100%;
+      color: #fff;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    }
+    .hero-content .subtitle {
+      color: #e0e0ff;
+      font-size: 1.18rem;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.13);
+      word-break: break-word;
+      max-width: 100%;
+    }
+    @media (max-width: 1100px) {
+      .hero-content h1 { font-size: 1.5rem; }
+      .hero-content .subtitle { font-size: 1rem; }
+    }
+    @media (max-width: 700px) {
+      .hero-bg { min-height: 180px; height: 22vh; }
+      .hero-content h1 { font-size: 1.1rem; }
+      .hero-content .subtitle { font-size: 0.92rem; }
+      .hero-logo { font-size: 1.1rem; padding: 0.15em 0.7em; top: 10px; }
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2.5rem auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(80, 80, 120, 0.08);
+      padding: 2.5rem 2rem 2rem 2rem;
+      position: relative;
+      z-index: 1;
+      animation: fadeSlideIn 1.1s cubic-bezier(0.77,0,0.18,1);
+    }
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+    .section-title {
+      color: #6c47ff;
+      font-size: 1.18rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 0.7rem;
+      border-left: 4px solid #6c47ff;
+      padding-left: 0.7rem;
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .section-title:hover {
+      color: #fff;
+      background: #6c47ff;
+      box-shadow: 0 2px 12px rgba(108, 71, 255, 0.08);
+      border-left: 4px solid #20b2aa;
+      padding-left: 1.2rem;
+      transform: scale(1.03);
+    }
+    ul, ol {
+      margin-left: 1.2rem;
+      margin-bottom: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+    .info-box {
+      background: #f7f8fa;
+      border-left: 4px solid #6c47ff;
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      margin-bottom: 1.5rem;
+      color: #23233c;
+    }
+    .why-matters {
+      background: #edeaff;
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      margin-bottom: 1.5rem;
+      color: #23233c;
+      border-left: 4px solid #20b2aa;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      background: #6c47ff;
+      color: #fff;
+      padding: 0.7rem 1.5rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .back-btn:hover {
+      background: #4b2fcf;
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 4px 16px rgba(108, 71, 255, 0.13);
+    }
+  </style>
+</head>
+<body>
+  <div class="hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="hero-logo">V4UBiz Solutions</div>
+    <div class="hero-content">
+      <h1>🧬 Gujarat Biotechnology Policy (2022–27)</h1>
+      <div class="subtitle">Empowering Innovation, Health, and Growth Through Science</div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="section-title">🛠️ Eligible Activities & Products</div>
+    <div class="info-box">
+      The policy covers a wide range of biotechnology-based products and technologies, including:
+      <ul>
+        <li>✅ Vaccines (human/animal), gene therapy, and molecular diagnostics</li>
+        <li>✅ Biochips, biosensors, and biomedical devices</li>
+        <li>✅ Stem cells, synthetic biology, RNAi, and tissue culture</li>
+        <li>✅ Probiotics, nutraceuticals, bio-fertilizers/pesticides</li>
+        <li>✅ Bioplastics, biofuels, nano-biotech, enzyme tech</li>
+        <li>✅ Genetic/protein engineering, genomics, bioinformatics</li>
+        <li>✅ Contract research services (CROs) and fermentation-based products</li>
+      </ul>
+      <strong>Special Projects eligible for support:</strong>
+      <ul>
+        <li>Vaccine & stem cell therapy, antimicrobial resistance (AMR)</li>
+        <li>Molecular animal breeding, genome sequencing, biotech testing labs</li>
+        <li>Plug-and-play biotech facilities, BSL-3 labs, quality/accreditation labs</li>
+      </ul>
+    </div>
+
+    <div class="section-title">🏭 Eligible Entities</div>
+    <div class="info-box">
+      The policy applies to:
+      <ul>
+        <li>✔️ New biotech units</li>
+        <li>✔️ Existing units expanding/diversifying</li>
+        <li>✔️ SPVs, PSUs, or Institutes undertaking special projects</li>
+      </ul>
+    </div>
+
+    <div class="section-title">💡 Key Incentives: Gujarat Biotechnology Policy (2022–27)</div>
+    <ol>
+      <li><b>🏗️ Capital Assistance</b>
+        <div class="info-box">
+          <ul>
+            <li>25% of Eligible Gross Fixed Capital Investment (eGFCI)</li>
+            <li>Up to ₹40 crore, disbursed in 20 quarterly installments over 5 years</li>
+            <li>Includes land registration/stamp duty, machinery, utilities (solar, ETP/ZLD, HVAC), and technology acquisition costs</li>
+          </ul>
+        </div>
+      </li>
+      <li><b>🏦 Interest Subsidy</b>
+        <div class="info-box">
+          <ul>
+            <li>7% on Term Loan for a maximum of 5 years</li>
+            <li>Unit must bear a minimum of 2% interest</li>
+          </ul>
+        </div>
+      </li>
+      <li><b>💼 Operational Assistance</b>
+        <div class="info-box">
+          <ul>
+            <li>15% of Operational Expenses, up to ₹5 crore/year</li>
+            <li>Covers:</li>
+            <ul>
+              <li>Power Tariff Reimbursement (for 5 years)</li>
+              <li>Lease rental</li>
+              <li>Bandwidth leasing</li>
+              <li>Quality certification costs</li>
+              <li>Market development (₹50,000/event × 2)</li>
+              <li>Patent filing: Up to ₹10 lakh (domestic), ₹25 lakh (international)</li>
+            </ul>
+          </ul>
+        </div>
+      </li>
+      <li><b>👷‍♀️ Employment Generation Incentives</b>
+        <div class="info-box">
+          <ul>
+            <li>50% of Cost to Company (CTC)</li>
+            <li>Ceiling: ₹50,000 per male employee, ₹60,000 per female employee</li>
+            <li>For local employees serving minimum 1 year</li>
+          </ul>
+        </div>
+      </li>
+      <li><b>👥 EPF Reimbursement</b>
+        <div class="info-box">
+          <ul>
+            <li>100% for female employees</li>
+            <li>75% for male employees</li>
+            <li>Up to 12% of basic salary + DA + allowance, for 5 years</li>
+          </ul>
+        </div>
+      </li>
+      <li><b>⚡ Power Incentives</b>
+        <div class="info-box">
+          Electricity Duty Exemption (EDE): 100% exemption for 5 years under the Gujarat Electricity Duty Act
+        </div>
+      </li>
+    </ol>
+
+    <div class="section-title">📈 Why It Matters</div>
+    <div class="why-matters">
+      <ul>
+        <li>Helps Gujarat become India's biotech manufacturing and innovation hub</li>
+        <li>Fosters public health breakthroughs, greener solutions, and sustainable agri practices</li>
+        <li>Creates high-skilled job opportunities in science, healthcare, and pharmaceuticals</li>
+        <li>Supports startups in becoming global players through funding and infrastructure</li>
+        <li>Encourages collaboration between academia, industry, and government</li>
+      </ul>
+    </div>
+    <a href="index.html" class="back-btn">&#8592; Back to Home</a>
+  </div>
+</body>
+</html> 

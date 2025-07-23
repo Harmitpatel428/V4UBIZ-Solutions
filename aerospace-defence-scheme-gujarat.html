@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atma Nirbhar Gujarat Scheme – Aerospace & Defence Support | V4U</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(120deg, #f7f8fa 0%, #edeaff 100%);
+      color: #23233c;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+    .hero-bg {
+      width: 100vw;
+      min-height: 320px;
+      height: 50vh;
+      max-height: 600px;
+      background: url('Images/Aerospace.jpg') center center/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+      overflow: hidden;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(24,32,48,0.38);
+      z-index: 1;
+    }
+    .hero-logo {
+      position: absolute;
+      top: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 12px rgba(44,44,80,0.18);
+      z-index: 3;
+      font-family: 'Poppins', sans-serif;
+      background: rgba(44,44,80,0.18);
+      padding: 0.2em 1.2em;
+      border-radius: 12px;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 0 2vw;
+    }
+    .hero-content h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+      color: #fff;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.18);
+      word-break: break-word;
+      max-width: 100%;
+    }
+    .hero-content .subtitle {
+      color: #e0e0ff;
+      font-size: 1.18rem;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.13);
+      word-break: break-word;
+      max-width: 100%;
+    }
+    @media (max-width: 1100px) {
+      .hero-content h1 { font-size: 1.5rem; }
+      .hero-content .subtitle { font-size: 1rem; }
+    }
+    @media (max-width: 700px) {
+      .hero-bg { min-height: 180px; height: 22vh; }
+      .hero-content h1 { font-size: 1.1rem; }
+      .hero-content .subtitle { font-size: 0.92rem; }
+      .hero-logo { font-size: 1.1rem; padding: 0.15em 0.7em; top: 10px; }
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2.5rem auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(80, 80, 120, 0.08);
+      padding: 2.5rem 2rem 2rem 2rem;
+      position: relative;
+      z-index: 1;
+      animation: fadeSlideIn 1.1s cubic-bezier(0.77,0,0.18,1);
+    }
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+    .section-title {
+      color: #6c47ff;
+      font-size: 1.18rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 0.7rem;
+      border-left: 4px solid #6c47ff;
+      padding-left: 0.7rem;
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .section-title:hover {
+      color: #fff;
+      background: #6c47ff;
+      box-shadow: 0 2px 12px rgba(108, 71, 255, 0.08);
+      border-left: 4px solid #20b2aa;
+      padding-left: 1.2rem;
+      transform: scale(1.03);
+    }
+    ul, ol {
+      margin-left: 1.2rem;
+      margin-bottom: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+    .info-box {
+      background: #f7f8fa;
+      border-left: 4px solid #6c47ff;
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      margin-bottom: 1.5rem;
+      color: #23233c;
+    }
+    .why-matters {
+      background: #edeaff;
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      margin-bottom: 1.5rem;
+      color: #23233c;
+      border-left: 4px solid #20b2aa;
+    }
+    .note {
+      background: #fffbe6;
+      color: #b8860b;
+      border-left: 4px solid #ffe066;
+      border-radius: 8px;
+      padding: 0.8rem 1.2rem;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+      font-size: 1.08rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6em;
+    }
+    .note .icon {
+      font-size: 1.3em;
+    }
+    .link-box {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+    .link-box a {
+      color: #fff;
+      background: #6c47ff;
+      padding: 0.7em 1.5em;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s;
+      display: inline-block;
+    }
+    .link-box a:hover {
+      background: #4b2fcf;
+    }
+    .benefit-list li b {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5em;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      background: #6c47ff;
+      color: #fff;
+      padding: 0.7rem 1.5rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .back-btn:hover {
+      background: #4b2fcf;
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 4px 16px rgba(108, 71, 255, 0.13);
+    }
+  </style>
+</head>
+<body>
+  <div class="hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="hero-logo">V4UBiz Solutions</div>
+    <div class="hero-content">
+      <h1>🚀 Gujarat Aerospace & Defence (A&D) Incentive Scheme</h1>
+      <div class="subtitle">Fueling Indigenous Innovation in Aviation, Defence & Space</div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="section-title">📋 Policy Overview</div>
+    <div class="info-box">
+      <strong>Operative Period:</strong> December 19, 2016 – December 31, 2025<br><br>
+      <strong>Goal:</strong> To establish Gujarat as a premier hub for indigenous A&D manufacturing, aligned with Make in India and Aatmanirbhar Bharat.
+    </div>
+
+    <div class="section-title">🌟 Vision & Key Objectives</div>
+    <ul>
+      <li>✅ Attract 10% of India's defense manufacturing orders by value</li>
+      <li>✅ Bring in 5 mega A&D enterprises within 5 years</li>
+      <li>✅ Develop a vibrant local A&D ecosystem</li>
+      <li>✅ Create 20,000 jobs in the next 10 years</li>
+      <li>✅ Drive R&D, innovation & talent in aerospace and defence sectors</li>
+    </ul>
+
+    <div class="section-title">🔍 Focus Sectors</div>
+    <ul>
+      <li>Artillery & Small Arms</li>
+      <li>Defence Electronics</li>
+      <li>Shipbuilding & MRO</li>
+      <li>Automotive & Engineering</li>
+      <li>Logistics & Defence Textiles</li>
+      <li>Testing Ranges & R&D</li>
+      <li>Ancillary Cluster Development</li>
+    </ul>
+
+    <div class="section-title">🏭 Who Can Apply?</div>
+    <div class="info-box">
+      <table style='width:100%;border-collapse:collapse;'>
+        <tr><th style='text-align:left;'>Category</th><th>Definition</th></tr>
+        <tr><td>Mega A&D Enterprise</td><td>₹500 Cr+ investment & ₹50 Cr+ A&D orders; or Tier-1 supplier with 50%+ sales to A&D</td></tr>
+        <tr><td>Large A&D Enterprise</td><td>Below Mega but above MSME threshold</td></tr>
+        <tr><td>MSME A&D Enterprise</td><td>As per MSME Act, with 50%+ A&D-related turnover</td></tr>
+      </table>
+    </div>
+
+    <div class="section-title">💰 Key Incentives</div>
+    <ol>
+      <li><b>🧱 Land Support</b>
+        <div class="info-box">
+          <ul>
+            <li>50% Jantri rate for Govt. land</li>
+            <li>25% Jantri rate for inter-tidal land (for shipbuilding, etc.)</li>
+            <li>100% Stamp Duty & Registration Fee reimbursement</li>
+            <li>Land preference for units investing ₹200 Cr+</li>
+          </ul>
+        </div>
+      </li>
+      <li><b>💸 Capital Subsidy for A&D MSMEs</b>
+        <div class="info-box">
+          <table style='width:100%;border-collapse:collapse;'>
+            <tr><th style='text-align:left;'>Type</th><th>Subsidy %</th><th>Max Limit</th></tr>
+            <tr><td>Micro</td><td>25%</td><td>₹12.5 lakh</td></tr>
+            <tr><td>Small</td><td>25%</td><td>₹1.25 crore</td></tr>
+            <tr><td>Medium</td><td>25%</td><td>₹2.5 crore</td></tr>
+          </table>
+          <p><em>(One-time assistance during scheme period)</em></p>
+        </div>
+      </li>
+      <li><b>🏦 Interest Subsidy (for 5 Years)</b>
+        <div class="info-box">
+          <table style='width:100%;border-collapse:collapse;'>
+            <tr><th>Category</th><th>Domestic Loan</th><th>ECB</th><th>Annual Cap</th></tr>
+            <tr><td>Mega</td><td>5% or 50% (lower)</td><td>2% or 50% (lower)</td><td>₹10 Cr</td></tr>
+            <tr><td>Large</td><td>5% or 50%</td><td>2% or 50%</td><td>₹5 Cr</td></tr>
+            <tr><td>MSME</td><td>7% or 50%</td><td>2% or 50%</td><td>₹1 Cr</td></tr>
+          </table>
+        </div>
+      </li>
+      <li><b>💼 Tax Incentives</b>
+        <div class="info-box">
+          <ul>
+            <li>100% reimbursement of net VAT & CST paid</li>
+            <li>Available for 10 years from commercial production</li>
+            <li>Capped at 90% of eligible fixed capital investment</li>
+          </ul>
+        </div>
+      </li>
+      <li><b>⚡ Power Incentives</b>
+        <div class="info-box">
+          <ul>
+            <li><strong>Electricity Subsidy:</strong> ₹1 per unit for a period of 5 years</li>
+            <li><strong>Electricity Duty Exemption (EDE):</strong> 100% exemption for 5 years under the Gujarat Electricity Duty Act</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+
+    <div class="section-title">🧭 Why Gujarat for A&D?</div>
+    <ul>
+      <li>✅ Strong base in engineering, auto, chemicals, shipbuilding</li>
+      <li>✅ Strategic coastline & access to ports</li>
+      <li>✅ Investor-friendly ecosystem & industrial parks</li>
+      <li>✅ Integrated A&D clusters with common facilities</li>
+      <li>✅ Skilling, R&D, and licensing support</li>
+    </ul>
+
+    <div class="section-title">📢 Quick Facts</div>
+    <div class="info-box">
+      <ul>
+        <li>🚀 <strong>India:</strong> 3rd largest armed forces, high import dependency</li>
+        <li>🛡️ <strong>Policy aligned</strong> with GoI's liberalized FDI & licensing regime</li>
+        <li>💡 <strong>Gujarat provides</strong> the infrastructure + incentives + talent for A&D</li>
+      </ul>
+    </div>
+    <a href="index.html" class="back-btn">&#8592; Back to Home</a>
+  </div>
+</body>
+</html> 

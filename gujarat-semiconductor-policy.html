@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gujarat Semiconductor Policy | V4U</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(120deg, #f7f8fa 0%, #edeaff 100%);
+      color: #23233c;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+    .hero-bg {
+      width: 100vw;
+      min-height: 320px;
+      height: 50vh;
+      max-height: 600px;
+      background: url('Images/Semiconductor.jpg') center center/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+      overflow: hidden;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(24,32,48,0.38);
+      z-index: 1;
+    }
+    .hero-logo {
+      position: absolute;
+      top: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 12px rgba(44,44,80,0.18);
+      z-index: 3;
+      font-family: 'Poppins', sans-serif;
+      background: rgba(44,44,80,0.18);
+      padding: 0.2em 1.2em;
+      border-radius: 12px;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 0 2vw;
+    }
+    .hero-content h1 {
+      font-size: 2.2rem;
+      word-break: break-word;
+      max-width: 100%;
+      color: #fff;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    }
+    .hero-content .subtitle {
+      color: #e0e0ff;
+      font-size: 1.18rem;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.13);
+      word-break: break-word;
+      max-width: 100%;
+    }
+    @media (max-width: 1100px) {
+      .hero-content h1 { font-size: 1.5rem; }
+      .hero-content .subtitle { font-size: 1rem; }
+    }
+    @media (max-width: 700px) {
+      .hero-bg { min-height: 180px; height: 22vh; }
+      .hero-content h1 { font-size: 1.1rem; }
+      .hero-content .subtitle { font-size: 0.92rem; }
+      .hero-logo { font-size: 1.1rem; padding: 0.15em 0.7em; top: 10px; }
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2.5rem auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(80, 80, 120, 0.08);
+      padding: 2.5rem 2rem 2rem 2rem;
+      position: relative;
+      z-index: 1;
+      animation: fadeSlideIn 1.1s cubic-bezier(0.77,0,0.18,1);
+    }
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+    .section-title {
+      color: #6c47ff;
+      font-size: 1.18rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 0.7rem;
+      border-left: 4px solid #6c47ff;
+      padding-left: 0.7rem;
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .section-title:hover {
+      color: #fff;
+      background: #6c47ff;
+      box-shadow: 0 2px 12px rgba(108, 71, 255, 0.08);
+      border-left: 4px solid #20b2aa;
+      padding-left: 1.2rem;
+      transform: scale(1.03);
+    }
+    ul, ol {
+      margin-left: 1.2rem;
+      margin-bottom: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+    .info-box {
+      background: #f7f8fa;
+      border-left: 4px solid #6c47ff;
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      margin-bottom: 1.5rem;
+      color: #23233c;
+    }
+    .why-matters {
+      background: #edeaff;
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      margin-bottom: 1.5rem;
+      color: #23233c;
+      border-left: 4px solid #20b2aa;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      background: #6c47ff;
+      color: #fff;
+      padding: 0.7rem 1.5rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .back-btn:hover {
+      background: #4b2fcf;
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 4px 16px rgba(108, 71, 255, 0.13);
+    }
+  </style>
+</head>
+<body>
+  <div class="hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="hero-logo">V4UBiz Solutions</div>
+    <div class="hero-content">
+      <h1>🧠 Gujarat Semiconductor Policy (2022–27)</h1>
+      <div class="subtitle">Paving the Way for India's Silicon Ecosystem</div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="section-title">📋 Policy Overview</div>
+    <div class="info-box">
+      <strong>Effective Date:</strong> July 27, 2022 – Valid for 5 years<br><br>
+      <strong>Goal:</strong> Make Gujarat the Semiconductor Capital of India by building an end-to-end, globally competitive chip & display manufacturing ecosystem.
+    </div>
+
+    <div class="section-title">🌟 Vision & Objectives</div>
+    <div class="info-box">
+      <strong>Vision:</strong><br>
+      To make Gujarat a leader in semiconductor & display manufacturing, fostering investments, innovation, and a self-reliant ESDM ecosystem.<br><br>
+      <strong>Key Targets:</strong>
+      <ul>
+        <li>✅ Establish 2 semiconductor fabs & 1 display fab</li>
+        <li>✅ Attract USD 10 billion in investments</li>
+        <li>✅ Create 2 lakh direct & indirect jobs</li>
+        <li>✅ Build a strong design, assembly, and packaging ecosystem</li>
+        <li>✅ Enable semiconductor exports from Gujarat</li>
+        <li>✅ Boost R&D, skilling, and startup support</li>
+      </ul>
+    </div>
+
+    <div class="section-title">🏭 Eligible Projects</div>
+    <ul>
+      <li>Semiconductor Fabs</li>
+      <li>Display Fabs</li>
+      <li>OSAT/ATMP Units (Assembly, Testing, Marking & Packaging)</li>
+      <li>Design Units (under DLI Scheme)</li>
+      <li>Other GoI-approved semiconductor ecosystem projects</li>
+    </ul>
+
+    <div class="section-title">💰 Key Incentives</div>
+    <ol>
+      <li><b>💸 Capital Assistance</b>
+        <div class="info-box">
+          <table style='width:100%;border-collapse:collapse;'>
+            <tr><th style='text-align:left;'>Project Type</th><th>Incentive Amount</th></tr>
+            <tr><td>Fab/Display/OSAT</td><td>40% of GoI DLI support or 20% of Project Cost, whichever is higher</td></tr>
+            <tr><td>Design Units</td><td>50% Capex for R&D setup, up to ₹10 Cr</td></tr>
+            <tr><td>MLI for Design</td><td>2% of Net Sales Turnover for 5 years</td></tr>
+          </table>
+        </div>
+      </li>
+      <li><b>🏦 Interest Subsidy</b>
+        <div class="info-box">
+          <ul>
+            <li>✅ 7% subsidy on term loans</li>
+            <li>✅ Max: ₹20 Cr/year for 10 years</li>
+            <li>✅ Unit must bear minimum 2% interest</li>
+          </ul>
+        </div>
+      </li>
+      <li><b>⚡ Power Subsidy</b>
+        <div class="info-box">
+          <ul>
+            <li>✅ ₹1/unit on electricity (including captive renewable power)</li>
+            <li>✅ Valid for 10 years from commercial production</li>
+          </ul>
+        </div>
+      </li>
+      <li><b>💧 Water Subsidy</b>
+        <div class="info-box">
+          <ul>
+            <li>✅ ₹12 per cubic meter</li>
+            <li>✅ For 5 years from production start</li>
+          </ul>
+        </div>
+      </li>
+      <li><b>🧾 Stamp Duty Reimbursement</b>
+        <div class="info-box">
+          100% reimbursement on land lease or purchase for eligible projects
+        </div>
+      </li>
+      <li><b>🔁 Relocation Support</b>
+        <div class="info-box">
+          <ul>
+            <li>✅ 50% reimbursement on equipment import cost (max ₹5 Cr)</li>
+            <li>✅ For companies shifting operations from outside India to Gujarat</li>
+          </ul>
+        </div>
+      </li>
+      <li><b>👩‍💼 EPF Reimbursement</b>
+        <div class="info-box">
+          <ul>
+            <li>✅ 100% of employer contribution (up to ₹1,800/month/employee)</li>
+            <li>✅ Valid for 10 years for new recruits in Gujarat</li>
+          </ul>
+        </div>
+      </li>
+      <li><b>🔌 Electricity Duty Exemption</b>
+        <div class="info-box">
+          100% exemption under Gujarat Electricity Act, 2003
+        </div>
+      </li>
+    </ol>
+
+    <div class="section-title">🏢 Non-Fiscal Incentives</div>
+    <ul>
+      <li>✅ Self-Certification for compliance ease</li>
+      <li>✅ Dedicated Nodal Agency – Gujarat State Electronics Mission (GSEM)</li>
+      <li>✅ Single Window Clearance for project approvals</li>
+      <li>✅ Skill Development via industry-academia partnerships</li>
+      <li>✅ Start-up & MSME Support through design & prototyping grants</li>
+      <li>✅ Government-facilitated common facilities (e.g., cleanrooms)</li>
+      <li>✅ R&D Assistance for innovation-driven units</li>
+    </ul>
+
+    <div class="section-title">🔍 Why It Matters</div>
+    <div class="why-matters">
+      <ul>
+        <li>Builds India's strategic independence in chip manufacturing</li>
+        <li>Attracts global giants in semiconductors, ATMP, & display tech</li>
+        <li>Boosts Make in India & Aatmanirbhar Bharat with high-end manufacturing</li>
+        <li>Creates deep-tech jobs, startups, and exports from Gujarat</li>
+      </ul>
+    </div>
+    <a href="index.html" class="back-btn">&#8592; Back to Home</a>
+  </div>
+</body>
+</html> 

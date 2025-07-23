@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atma Nirbhar Gujarat Scheme for Mega Industries | V4U</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(120deg, #f7f8fa 0%, #edeaff 100%);
+      color: #23233c;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+    .hero-bg {
+      width: 100vw;
+      min-height: 320px;
+      height: 50vh;
+      max-height: 600px;
+      background: url('Images/Mega industries.jpg') center bottom/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+      overflow: hidden;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(24,32,48,0.38);
+      z-index: 1;
+    }
+    .hero-logo {
+      position: absolute;
+      top: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 12px rgba(44,44,80,0.18);
+      z-index: 3;
+      font-family: 'Poppins', sans-serif;
+      background: rgba(44,44,80,0.18);
+      padding: 0.2em 1.2em;
+      border-radius: 12px;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+    .hero-content h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+      color: #fff;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    }
+    .hero-content .subtitle {
+      color: #e0e0ff;
+      font-size: 1.18rem;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.13);
+    }
+    @media (max-width: 700px) {
+      .hero-bg { min-height: 180px; height: 22vh; }
+      .hero-content h1 { font-size: 1.2rem; }
+      .hero-content .subtitle { font-size: 0.98rem; }
+      .hero-logo { font-size: 1.1rem; padding: 0.15em 0.7em; top: 10px; }
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2.5rem auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(80, 80, 120, 0.08);
+      padding: 2.5rem 2rem 2rem 2rem;
+      position: relative;
+      z-index: 1;
+      animation: fadeSlideIn 1.1s cubic-bezier(0.77,0,0.18,1);
+    }
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+    .section-title {
+      color: #6c47ff;
+      font-size: 1.18rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 0.7rem;
+      border-left: 4px solid #6c47ff;
+      padding-left: 0.7rem;
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .section-title:hover {
+      color: #fff;
+      background: #6c47ff;
+      box-shadow: 0 2px 12px rgba(108, 71, 255, 0.08);
+      border-left: 4px solid #20b2aa;
+      padding-left: 1.2rem;
+      transform: scale(1.03);
+    }
+    ul, ol {
+      margin-left: 1.2rem;
+      margin-bottom: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+    .info-box {
+      background: #f7f8fa;
+      border-left: 4px solid #6c47ff;
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      margin-bottom: 1.5rem;
+      color: #23233c;
+    }
+    .why-matters {
+      background: #edeaff;
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      margin-bottom: 1.5rem;
+      color: #23233c;
+      border-left: 4px solid #20b2aa;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      background: #6c47ff;
+      color: #fff;
+      padding: 0.7rem 1.5rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .back-btn:hover {
+      background: #4b2fcf;
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 4px 16px rgba(108, 71, 255, 0.13);
+    }
+    .vision-box {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 20px rgba(102, 126, 234, 0.2);
+    }
+    .vision-box h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .vision-box ul {
+      margin-left: 0;
+      list-style: none;
+    }
+    .vision-box li {
+      margin-bottom: 0.8rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    .vision-box li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #4ade80;
+      font-weight: bold;
+    }
+    .sectors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .sector-item {
+      background: #f8f9ff;
+      border: 2px solid #e0e7ff;
+      border-radius: 8px;
+      padding: 0.8rem;
+      text-align: center;
+      font-weight: 600;
+      color: #4f46e5;
+      transition: all 0.3s ease;
+    }
+    .sector-item:hover {
+      background: #4f46e5;
+      color: white;
+      transform: translateY(-2px);
+    }
+    .table-container {
+      overflow-x: auto;
+      margin: 1rem 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 0.8rem;
+      text-align: left;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    th {
+      background: #6c47ff;
+      color: white;
+      font-weight: 600;
+    }
+    tr:nth-child(even) {
+      background: #f9fafb;
+    }
+    tr:hover {
+      background: #f3f4f6;
+    }
+    .incentive-card {
+      background: #f8f9ff;
+      border: 2px solid #e0e7ff;
+      border-radius: 12px;
+      padding: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .incentive-card h4 {
+      color: #4f46e5;
+      margin-top: 0;
+      margin-bottom: 0.8rem;
+    }
+    .highlight {
+      background: #fef3c7;
+      border-left: 4px solid #f59e0b;
+      padding: 0.8rem;
+      margin: 1rem 0;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="hero-logo">V4UBiz Solutions</div>
+    <div class="hero-content">
+      <h1>Atma Nirbhar Gujarat Scheme for Mega Industries</h1>
+      <div class="subtitle">Empowering Global Champions, Driving Energy Independence, and Sustainable Growth</div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="vision-box">
+      <h3>🌟 Core Vision & Objectives</h3>
+      <p>The scheme aligns with the national vision of 'Aatmanirbhar Bharat', aiming to:</p>
+      <ul>
+        <li>Reduce import dependence and strengthen global supply chains</li>
+        <li>Create "Global Champions" in key thrust sectors</li>
+        <li>Promote Green Energy ecosystems and contribute to Energy Independence</li>
+        <li>Maximize economic multiplier effects and employment generation</li>
+        <li>Leverage Gujarat's industrial strengths to build a resilient, innovation-led economy</li>
+      </ul>
+    </div>
+
+    <div class="section-title">🧱 Definition of Mega Industrial Unit</div>
+    <div class="info-box">
+      A unit that meets both criteria:
+      <ul>
+        <li><strong>Minimum Investment:</strong> ₹2,500 crore in Plant & Machinery</li>
+        <li><strong>Minimum Direct Employment:</strong> 2,500 persons</li>
+        <li><em>(Only in notified Thrust Sectors)</em></li>
+      </ul>
+    </div>
+
+    <div class="section-title">🎯 Thrust Sectors (10 Identified)</div>
+    <div class="sectors-grid">
+      <div class="sector-item">Green Energy Ecosystem</div>
+      <div class="sector-item">Mobility</div>
+      <div class="sector-item">Capital Equipment</div>
+      <div class="sector-item">Metals and Minerals</div>
+      <div class="sector-item">Textile & Apparel</div>
+      <div class="sector-item">Sustainability</div>
+      <div class="sector-item">Agro Processing</div>
+      <div class="sector-item">Gems and Jewellery</div>
+      <div class="sector-item">Chemicals</div>
+      <div class="sector-item">Healthcare</div>
+    </div>
+
+    <div class="section-title">🛠️ Eligible Fixed Capital Investment (EFCI) Includes:</div>
+    <ul>
+      <li>Plant & Machinery (imported/indigenous)</li>
+      <li>Equipment, fixtures, testing labs</li>
+      <li>Electrification, fire safety, and waste management infrastructure</li>
+      <li>Support utilities (boilers, compressors, captive power plants, solar units, HVAC, etc.)</li>
+      <li>ETP/ZLD plants, technical civil works, etc.</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>❌ Ineligible Capital Assets/Expenditure:</strong>
+      <ul>
+        <li>Land and land development</li>
+        <li>Vehicles (transport or material handling)</li>
+        <li>Office equipment, furniture, fixtures</li>
+        <li>Real estate/commercial/retail facilities</li>
+      </ul>
+    </div>
+
+    <div class="section-title">🕓 Eligible Investment Period</div>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>GFCI Range</th>
+            <th>Eligible Investment Period</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>₹2,500 Cr – ₹5,000 Cr</td>
+            <td>24 months from DoCP</td>
+          </tr>
+          <tr>
+            <td>₹5,000 Cr – ₹10,000 Cr</td>
+            <td>48 months from DoCP</td>
+          </tr>
+          <tr>
+            <td>₹10,000 Cr – ₹20,000 Cr</td>
+            <td>72 months from DoCP</td>
+          </tr>
+          <tr>
+            <td>> ₹20,000 Cr</td>
+            <td>96 months from DoCP</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-title">💰 Incentives under the Scheme</div>
+    
+    <div class="incentive-card">
+      <h4>1. 💸 Interest Subsidy</h4>
+      <ul>
+        <li><strong>Rate:</strong> 7% on Term Loan</li>
+        <li><strong>Cap:</strong> Up to 1.2% of EFCI per annum</li>
+        <li><strong>Duration:</strong> 10 years</li>
+        <li><strong>Condition:</strong> Minimum 2% interest to be borne by the unit</li>
+      </ul>
+    </div>
+
+    <div class="incentive-card">
+      <h4>2. 🧾 Net SGST Reimbursement</h4>
+      <ul>
+        <li><strong>Rate:</strong> 100% of Net SGST paid on intra-state sales</li>
+        <li><strong>Cap:</strong> Up to 0.9% of EFCI per annum</li>
+        <li><strong>Duration:</strong> 20 years</li>
+        <li><strong>Note:</strong> Net SGST = Output SGST – Input SGST (excluding capital goods and petroleum inputs)</li>
+      </ul>
+    </div>
+
+    <div class="incentive-card">
+      <h4>3. 👷‍♀️ EPF Reimbursement</h4>
+      <ul>
+        <li><strong>Quantum:</strong> Reimbursement of employer's statutory EPF contribution</li>
+      </ul>
+    </div>
+
+    <div class="incentive-card">
+      <h4>4. ⚡ Power Incentives</h4>
+      <ul>
+        <li><strong>Electricity Duty Exemption (EDE):</strong> 100% exemption for 5 years under the Gujarat Electricity Duty Act</li>
+      </ul>
+    </div>
+
+    <div class="incentive-card">
+      <h4>5. 🧾 Stamp Duty Reimbursement</h4>
+      <ul>
+        <li><strong>✅ 100% reimbursement</strong> on land lease or purchase for eligible projects</li>
+      </ul>
+    </div>
+
+    <div class="section-title">📋 Eligibility Criteria</div>
+    
+    <div class="info-box">
+      <h4>✅ For New Units:</h4>
+      <ul>
+        <li>Must qualify as Mega Industrial Unit</li>
+        <li>Must commence commercial production within scheme period (5 Oct 2022 – 4 Oct 2032)</li>
+        <li>Obtain DPIIT acknowledgment</li>
+        <li>No duplicate benefits under other state/central schemes</li>
+      </ul>
+    </div>
+
+    <div class="info-box">
+      <h4>✅ For Expansion Units:</h4>
+      <ul>
+        <li>50% increase in existing:
+          <ul>
+            <li>Investment in Plant & Machinery, and</li>
+            <li>Production capacity</li>
+          </ul>
+        </li>
+        <li>At least 75% capacity utilization of existing facility</li>
+        <li>Must qualify under Mega Industrial Unit definition post-expansion</li>
+      </ul>
+    </div>
+
+    <a href="index.html" class="back-btn">&#8592; Back to Home</a>
+  </div>
+</body>
+</html> 

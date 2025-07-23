@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Happiest Clients | V4U</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(120deg, #f3f7fd 0%, #f9f6ff 100%);
+      color: #23233c;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 2.5rem auto;
+      background: #fff;
+      border-radius: 22px;
+      box-shadow: 0 8px 32px rgba(108, 71, 255, 0.10), 0 2px 12px rgba(80,80,120,0.09);
+      padding: 2.5rem 3.5rem 2rem 3.5rem;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    .main-title {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: #6c47ff;
+      letter-spacing: 1.2px;
+      margin-bottom: 0.7rem;
+      line-height: 1.1;
+      border-radius: 12px;
+      text-shadow: 0 4px 24px rgba(108, 71, 255, 0.13), 0 2px 8px rgba(80,80,120,0.10);
+      display: block;
+    }
+    .desc {
+      color: #20b2aa;
+      font-size: 1.18rem;
+      margin-bottom: 2.2rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+    .testimonials {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .testimonial {
+      background: #edeaff;
+      border-radius: 12px;
+      padding: 0.8rem 0.7rem;
+      box-shadow: 0 2px 8px rgba(108, 71, 255, 0.08);
+      text-align: left;
+      font-size: 0.9rem;
+      position: relative;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .testimonial:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(108, 71, 255, 0.15);
+      background: #f0f4ff;
+    }
+    .testimonial:hover img {
+      transform: scale(1.05);
+    }
+    .testimonial img {
+      transition: transform 0.3s ease;
+      width: 60px !important;
+      height: 60px !important;
+      border-radius: 8px !important;
+      margin-right: 0.7rem !important;
+    }
+
+    .testimonial .name {
+      font-weight: 700;
+      color: #23233c;
+      margin-top: 0.1rem;
+      font-size: 0.85rem;
+      display: block;
+    }
+    .testimonial .company {
+      color: #23233c;
+      font-size: 0.9rem;
+      margin-left: 0;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      background: #6c47ff;
+      color: #fff;
+      padding: 0.7rem 1.5rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .back-btn:hover {
+      background: #20b2aa;
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 4px 16px rgba(32, 178, 170, 0.13);
+    }
+    @media (max-width: 700px) {
+      .container { padding: 1.2rem 0.5rem; }
+      .main-title { font-size: 1.3rem; }
+      .testimonials {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+      }
+      .testimonial {
+        padding: 0.7rem 0.6rem;
+        font-size: 0.85rem;
+      }
+      .testimonial .company {
+        font-size: 0.85rem;
+      }
+      .testimonial .name {
+        font-size: 0.8rem;
+      }
+    }
+    .review-text { display: none; margin-top: 0.5rem; }
+    .see-review-btn {
+      margin-top: 0.5rem;
+      background: #6c47ff;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 0.5rem 1.2rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .see-review-btn:hover { background: #20b2aa; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="main-title">Our More Than 500+ Happiest Clients</div>
+    <div class="desc" style="font-size:0.92rem; line-height:1.4; margin-bottom:0.7rem;">
+      We are proud to have helped hundreds of businesses and entrepreneurs achieve their goals with government subsidies & expert guidance.<br>
+      Here are just a few stories from our happiest clients who trusted V4U for their growth journey.
+    </div>
+    <div class="testimonials">
+      <div class="testimonial">
+        <img src="Client Logo/TATA.png" alt="TATA Steel Logo" style="width:60px;height:60px;border-radius:8px;object-fit:cover;float:left;margin-right:0.7rem;">
+        <div style="overflow:hidden;">
+          <span class="company"><b>TATA Steel Downstream Product LTD </b></span>
+          <span class="name"><b>Location - Gujarat Unit</b></span>
+          <span class="name"><b>Project Size: Large</b></span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="Client Logo/falcon.jpeg" alt="Falcon Agrifriz Foods Logo" style="width:95px;height:95px;border-radius:14px;object-fit:cover;float:left;margin-right:1rem;">
+        <div style="overflow:hidden;">
+          <span class="company"><b>Falcon Agrifriz Foods</b></span>
+          <span class="name"><b>Location - Kadi, Mehsana</b></span>
+          <span class="name"><b>Project Size: Large</b></span>
+         </div>
+      </div>
+      <div class="testimonial">
+        <img src="Client Logo/Vihaan.png" alt="Vihaan Clean & Green Logo" style="width:95px;height:95px;border-radius:14px;object-fit:contain;float:left;margin-right:1rem;background:#f8f9fa;">
+        <div style="overflow:hidden;">
+          <span class="company"><b>Vihaan Clean & Green <span style="color: red;">(Hyfun foods)</span></b></span>
+          <span class="name"><b>Location - Mehsana</b></span>
+          <span class="name"><b>Project Size: Large</b></span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="Client Logo/Secure Industries.jpeg" alt="Secure Industries Logo" style="width:95px;height:95px;border-radius:14px;object-fit:cover;float:left;margin-right:1rem;">
+        <div style="overflow:hidden;">
+          <span class="company"><b>Secure Industries <span style="color: red;">(Client of Coca Cola)</span></b></span>
+          <span class="name"><b>Location - Bol GIDC, Sanad, Ahmedabad</b></span>
+          <span class="name"><b>Project Size: Large</b></span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="Client Logo/Paras WebCoat.jpeg" alt="Paras WebCoat Logo" style="width:95px;height:95px;border-radius:14px;object-fit:contain;float:left;margin-right:1rem;background:#f8f9fa;">
+        <div style="overflow:hidden;">
+          <span class="company"><b>Paras WebCoat Pvt Ltd </b><span style="color: red;">(Client of ITC Group)</span></span>
+          <span class="name"><b>Location - Kadi, Mehsana</b></span>
+          <span class="name"><b>Project Size: Large</b></span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="Client Logo/Angur.jpeg" alt="Angur Toor Dal Logo" style="width:95px;height:95px;border-radius:14px;object-fit:cover;float:left;margin-right:1rem;">
+        <div style="overflow:hidden;">
+          <span class="company"><b>Angur Toor Dal (Patel CR)</b></span>
+          <span class="name"><b>Location - Vasad, Anand</b></span>
+          <span class="name"><b>Project Size: Large</b></span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="Client Logo/Heliocentric Precision.jpg" alt="Heliocentric Precision Logo" style="width:95px;height:95px;border-radius:14px;object-fit:cover;float:left;margin-right:1rem;">
+        <div style="overflow:hidden;">
+          <span class="company"><b>Heliocentric Precision Pvt Ltd</b><span style="color: red;"> (Aerospace & defance)</span>
+          <span class="name"><b>Location - Bhavnagar</b></span>
+          <span class="name"><b>Project Size: Medium</b></span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="Client Logo/Edizel.png" alt="Edizel Biofuel Logo" style="width:95px;height:95px;border-radius:14px;object-fit:cover;float:left;margin-right:1rem;">
+        <div style="overflow:hidden;">
+          <span class="company"><b>Edizel Biofuel</b><span style="color: red;"> (Client of Bharat Petroleum [BPCL])</span>
+          <span class="name"><b>Location - Vadodra</b></span>
+          <span class="name"><b>Project Size: Large</b></span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="Client Logo/Palco.jpeg" alt="Palco Recycle Logo" style="width:95px;height:95px;border-radius:14px;object-fit:contain;float:left;margin-right:1rem;background:#f8f9fa;">
+        <div style="overflow:hidden;">
+          <span class="company"><b>Palco Recycle Ltd</b><span style="color: red;"> (Client of TATA)</span></span>
+          <span class="name"><b>Location - Mehsana</b></span>
+          <span class="name"><b>Project Size: Medium</b></span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="Client Logo/Ping.png" alt="Ping Telematics Logo" style="width:95px;height:95px;border-radius:14px;object-fit:cover;float:left;margin-right:1rem;">
+        <div style="overflow:hidden;">
+          <span class="company"><b>Ping Telematics Pvt Ltd <span style="color: red;">(Client of Hitachi)</span></b></span>
+          <span class="name"><b>Location - Kadi, Mehsana</b></span>
+          <span class="name"><b>Project Size: Medium</b></span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="Client Logo/Airtech.jpeg" alt="Airtech Cryogenic Gases Logo" style="width:95px;height:95px;border-radius:14px;object-fit:cover;float:left;margin-right:1rem;">
+        <div style="overflow:hidden;">
+          <span class="company"><b>Airtech Cryogenic Gases Pvt. Ltd</b></span>
+          <span class="name"><b>Location - Dholka, Ahmedabad</b></span>
+          <span class="name"><b>Project Size: Large</b></span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="Client Logo/Nuramed.png" alt="Nuramed Pharmaceuticals Logo" style="width:95px;height:95px;border-radius:14px;object-fit:cover;float:left;margin-right:1rem;">
+        <div style="overflow:hidden;">
+          <span class="company"><b>Nuramed Pharmaceuticals Pvt Ltd</b></span>
+          <span class="name"><b>Location - Kadi, Mehsana</b></span>
+          <span class="name"><b>Project Size: Medium</b></span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="Client Logo/Blutris.png" alt="Blutris Healthcare Logo" style="width:95px;height:95px;border-radius:14px;object-fit:contain;float:left;margin-right:1rem;background:#f8f9fa;">
+        <div style="overflow:hidden;">
+          <span class="company"><b>Blutris Healthcare Pvt Ltd</b></span>
+          <span class="name"><b>Location - Kadi, Mehsana</b></span>
+          <span class="name"><b>Project Size: Medium</b></span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="Client Logo/A Innovative food.png" alt="A Innovative Food Logo" style="width:95px;height:95px;border-radius:14px;object-fit:contain;float:left;margin-right:1rem;background:#f8f9fa;">
+        <div style="overflow:hidden;">
+          <span class="company"><b>A Innovative Food Pvt Ltd</b></span>
+          <span class="name"><b>Location - Bavla, Ahmedabad</b></span>
+          <span class="name"><b>Project Size: Medium</b></span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="Client Logo/Elikem.jpeg" alt="Elikem Pharma Logo" style="width:95px;height:95px;border-radius:14px;object-fit:contain;float:left;margin-right:1rem;background:#f8f9fa;">
+        <div style="overflow:hidden;">
+          <span class="company"><b>Elikem Pharma Pvt Ltd</b></span>
+          <span class="name"><b>Location - Kadi, Mehsana</b></span>
+          <span class="name"><b>Project Size: Medium</b></span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="Client Logo/Hemtech Industries.png" alt="Hemtech Industries Logo" style="width:95px;height:95px;border-radius:14px;object-fit:contain;float:left;margin-right:1rem;background:#f8f9fa;">
+        <div style="overflow:hidden;">
+          <span class="company"><b>Hemtech Industries Pvt Ltd <span style="color: red;">(Textile)</span></b></span>
+          <span class="name"><b>Location - Ahmedabad</b></span>
+          <span class="name"><b>Project Size: Large</b></span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="Client Logo/Rhombus.png" alt="Rhombus Pharma Logo" style="width:95px;height:95px;border-radius:14px;object-fit:contain;float:left;margin-right:1rem;background:#f8f9fa;">
+        <div style="overflow:hidden;">
+          <span class="company"><b>Rhombus Pharma Pvt Ltd</b></span>
+          <span class="name"><b>Location - Mehsana</b></span>
+          <span class="name"><b>Project Size: Medium</b></span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="Client Logo/NGU foods.jpeg" alt="NGU Foods Logo" style="width:95px;height:95px;border-radius:14px;object-fit:contain;float:left;margin-right:1rem;background:#f8f9fa;">
+        <div style="overflow:hidden;">
+          <span class="company"><b>NGU Foods Pvt Ltd</b></span>
+          <span class="name"><b>Location - Ahmedabad</b></span>
+          <span class="name"><b>Project Size: Medium</b></span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="Client Logo/TesiaLogo.png" alt="Tesia Dairy Logo" style="width:95px;height:95px;border-radius:14px;object-fit:contain;float:left;margin-right:1rem;background:#f8f9fa;">
+        <div style="overflow:hidden;">
+          <span class="company"><b>Tesia Dairy Pvt Ltd</b></span>
+          <span class="name"><b>Location - Ahmedabad</b></span>
+          <span class="name"><b>Project Size: Medium</b></span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="Client Logo/Mayura Coatings.png" alt="Mayura Coatings Logo" style="width:95px;height:95px;border-radius:14px;object-fit:contain;float:left;margin-right:1rem;background:#f8f9fa;">
+        <div style="overflow:hidden;">
+          <span class="company"><b>Mayura Pvd Coating Pvt Ltd</b></span>
+          <span class="name"><b>Location - Ahmedabad</b></span>
+          <span class="name"><b>Project Size: Small</b></span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="Client Logo/Global paper industries.png" alt="Global Paper Logo" style="width:95px;height:95px;border-radius:14px;object-fit:contain;float:left;margin-right:1rem;background:#f8f9fa;">
+        <div style="overflow:hidden;">
+          <span class="company"><b>Global Paper Pvt Ltd</b></span>
+          <span class="name"><b>Location - Deesa, Banaskantha</b></span>
+          <span class="name"><b>Project Size: Medium</b></span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="Client Logo/DCG cables.png" alt="DCG Cables Logo" style="width:95px;height:95px;border-radius:14px;object-fit:contain;float:left;margin-right:1rem;background:#f8f9fa;">
+        <div style="overflow:hidden;">
+          <span class="company"><b>DCG Cables & Wires Pvt Ltd</b></span>
+          <span class="name"><b>Location - Ahmedabad</b></span>
+          <span class="name"><b>Project Size: Medium</b></span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="Client Logo/Savino.jpeg" alt="Savino Logo" style="width:95px;height:95px;border-radius:14px;object-fit:contain;float:left;margin-right:1rem;background:#f8f9fa;">
+        <div style="overflow:hidden;">
+          <span class="company"><b>Savino</b></span>
+          <span class="name"><b>Location - Kadi, Mehsana</b></span>
+          <span class="name"><b>Project Size: Medium</b></span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="Client Logo/MRP.png" alt="MRP Agrotech Logo" style="width:60px;height:60px;border-radius:8px;object-fit:contain;float:left;margin-right:0.7rem;background:#f8f9fa;">
+        <div style="overflow:hidden;">
+          <span class="company"><b>MRP AGROTECH INDUSTRIES</b></span>
+          <span class="name"><b>Location - Ahmedabad</b></span>
+          <span class="name"><b>Project Size: Large</b></span>
+        </div>
+      </div>
+    </div>
+    <a href="index.html" class="back-btn">&#8592; Back to Home</a>
+  </div>
+</body>
+</html> 

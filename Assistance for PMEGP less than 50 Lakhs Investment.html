@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prime Minister's Employment Generation Programme (PMEGP) | V4U</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(120deg, #f7f8fa 0%, #edeaff 100%);
+      color: #23233c;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+    .hero-bg {
+      width: 100vw;
+      min-height: 320px;
+      height: 50vh;
+      max-height: 600px;
+      background: url('Images/PMEGP.jpg') center bottom/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+      overflow: hidden;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(24,32,48,0.38);
+      z-index: 1;
+    }
+    .hero-logo {
+      position: absolute;
+      top: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 12px rgba(44,44,80,0.18);
+      z-index: 3;
+      font-family: 'Poppins', sans-serif;
+      background: rgba(44,44,80,0.18);
+      padding: 0.2em 1.2em;
+      border-radius: 12px;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 0 2vw;
+    }
+    .hero-content h1 {
+      font-size: 2.2rem;
+      word-break: break-word;
+      max-width: 100%;
+      color: #fff;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    }
+    .hero-content .subtitle {
+      color: #e0e0ff;
+      font-size: 1.18rem;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.13);
+      word-break: break-word;
+      max-width: 100%;
+    }
+    @media (max-width: 1100px) {
+      .hero-content h1 { font-size: 1.5rem; }
+      .hero-content .subtitle { font-size: 1rem; }
+    }
+    @media (max-width: 700px) {
+      .hero-bg { min-height: 180px; height: 22vh; }
+      .hero-content h1 { font-size: 1.1rem; }
+      .hero-content .subtitle { font-size: 0.92rem; }
+      .hero-logo { font-size: 1.1rem; padding: 0.15em 0.7em; top: 10px; }
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2.5rem auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(80, 80, 120, 0.08);
+      padding: 2.5rem 2rem 2rem 2rem;
+      position: relative;
+      z-index: 1;
+      animation: fadeSlideIn 1.1s cubic-bezier(0.77,0,0.18,1);
+    }
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+    .section-title {
+      color: #6c47ff;
+      font-size: 1.18rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 0.7rem;
+      border-left: 4px solid #6c47ff;
+      padding-left: 0.7rem;
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .section-title:hover {
+      color: #fff;
+      background: #6c47ff;
+      box-shadow: 0 2px 12px rgba(108, 71, 255, 0.08);
+      border-left: 4px solid #20b2aa;
+      padding-left: 1.2rem;
+      transform: scale(1.03);
+    }
+    ul, ol {
+      margin-left: 1.2rem;
+      margin-bottom: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+    .info-box {
+      background: #f7f8fa;
+      border-left: 4px solid #6c47ff;
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      margin-bottom: 1.5rem;
+      color: #23233c;
+    }
+    .why-matters {
+      background: #edeaff;
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      margin-bottom: 1.5rem;
+      color: #23233c;
+      border-left: 4px solid #20b2aa;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      background: #6c47ff;
+      color: #fff;
+      padding: 0.7rem 1.5rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .back-btn:hover {
+      background: #4b2fcf;
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 4px 16px rgba(108, 71, 255, 0.13);
+    }
+  </style>
+</head>
+<body>
+  <div class="hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="hero-logo">V4UBiz Solutions</div>
+    <div class="hero-content">
+      <h1>Prime Minister's Employment Generation Programme (PMEGP)</h1>
+      <div class="subtitle">Empowering micro-enterprises across Gujarat to kickstart business dreams.</div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="section-title">📋 Scheme Overview</div>
+    <div class="info-box">
+      The Prime Minister's Employment Generation Programme (PMEGP) is a credit-linked subsidy scheme launched by the Government of India in August 2008. It emerged from the merger of two previous schemes: the Prime Minister's Rojgar Yojana (PMRY) and the Rural Employment Generation Programme (REGP).<br><br>
+      <strong>Current Status:</strong> The scheme has been approved for continuation for five years, from FY 2021-22 to FY 2025-26, with some modifications to its existing guidelines. The online portal for PMEGP became operational with the revised guidelines from June 1, 2022.<br><br>
+      <strong>Aim:</strong> To create employment opportunities by facilitating the establishment of micro-enterprises in both rural and urban non-farm sectors.
+    </div>
+
+    <div class="section-title">🎯 Objectives</div>
+    <ul>
+      <li>To generate employment opportunities in rural and urban areas by supporting new self-employment ventures/projects/micro enterprises.</li>
+      <li>To bring together traditional artisans and unemployed youth from both rural and urban areas, providing them with self-employment opportunities.</li>
+      <li>To ensure continuous and sustainable employment for a large segment of traditional and prospective artisans, and rural and urban unemployed youth, thereby helping to curb rural-to-urban migration.</li>
+      <li>To increase the wage-earning capacity of workers and artisans, contributing to the growth of rural and urban employment.</li>
+    </ul>
+
+    <div class="section-title">🛠️ Implementing Agencies</div>
+    <div class="info-box">
+      <strong>National Level:</strong> The PMEGP is a central sector scheme administered by the Ministry of Micro, Small and Medium Enterprises (MoMSME). Khadi and Village Industries Commission (KVIC) acts as the single nodal agency.<br><br>
+      <strong>State Level:</strong> The scheme is implemented through:
+      <ul>
+        <li>State offices of KVIC</li>
+        <li>State Khadi and Village Industries Boards (KVIBs)</li>
+        <li>District Industries Centres (DICs)</li>
+        <li>Coir Board (for coir-related activities)</li>
+        <li>Banks</li>
+      </ul>
+      <strong>Other Agencies:</strong> National Scheduled Castes Finance and Development Corporation (NSCFDC), National Scheduled Tribes Finance and Development Corporation (NSTFDC), and various Entrepreneurship Development Institutes may also be involved.
+    </div>
+
+    <div class="section-title">✅ Eligibility Conditions</div>
+    <div class="info-box">
+      <strong>For New Micro Enterprises:</strong>
+      <ul>
+        <li>Any individual above 18 years of age.</li>
+        <li>No income ceiling for assistance.</li>
+        <li>For projects costing above ₹10 lakh in manufacturing or above ₹5 lakh in business/service sectors, beneficiaries must have at least an VIII standard pass educational qualification.</li>
+        <li>Assistance is only available for new projects sanctioned under PMEGP.</li>
+        <li>Existing units that have already availed government subsidy under any other scheme are not eligible.</li>
+        <li>Projects without Capital Expenditure are not eligible.</li>
+        <li>Cost of land should not be included in the project cost, but the cost of ready-built shed or long-term lease/rental workshop for up to 3 years can be included.</li>
+        <li>Trading activities are generally restricted but permitted with specific conditions in NER, LWE-affected districts, A&N Islands, or for selling Khadi/Village Industry products.</li>
+        <li>Transport activities are allowed, but a ceiling of 10% on financed projects applies in most areas.</li>
+        <li>Only one person from one family (self and spouse) is eligible.</li>
+      </ul>
+      <strong>For Upgradation of Existing PMEGP/REGP/MUDRA Units:</strong>
+      <ul>
+        <li>Margin Money (subsidy) claimed under PMEGP must have been successfully adjusted after a lock-in period of 3 years.</li>
+        <li>The first loan under PMEGP/REGP/MUDRA must have been successfully repaid.</li>
+        <li>The unit should be profitable with good turnover and potential for growth through modernization/upgrading technology.</li>
+      </ul>
+    </div>
+
+    <div class="section-title">💰 Financial Assistance (Margin Money Subsidy)</div>
+    <div class="info-box">
+      The financial assistance is provided as a Margin Money Subsidy based on the project cost. The balance amount (excluding own contribution) is provided by banks.
+    </div>
+
+    <div class="section-title">🏭 For Setting up New Micro Enterprises</div>
+    <div class="info-box">
+      <table style='width:100%;border-collapse:collapse;'>
+        <tr><th style='text-align:left;'>Category of Beneficiary</th><th>Beneficiary's Contribution (of project cost)</th><th>Rate of Subsidy (of project cost) - Urban</th><th>Rate of Subsidy (of project cost) - Rural</th></tr>
+        <tr><td>General Category</td><td>10%</td><td>15%</td><td>25%</td></tr>
+        <tr><td>Special Category</td><td>05%</td><td>25%</td><td>35%</td></tr>
+      </table>
+      <p><em>Special Category (Includes SC, ST, OBC, Minorities, Women, Ex-Servicemen, Transgenders, Differently-abled, NER, Aspirational Districts, Hill and Border areas).</em></p>
+      <strong>Maximum Project Cost:</strong>
+      <ul>
+        <li>Manufacturing sector: ₹50 lakhs.</li>
+        <li>Business/Service sector: ₹20 lakhs.</li>
+      </ul>
+      <p><em>If the project cost exceeds these limits, banks may provide the balance without government subsidy.</em></p>
+    </div>
+
+    <div class="section-title">🔄 For Upgradation of Existing PMEGP/REGP/MUDRA Units</div>
+    <div class="info-box">
+      <table style='width:100%;border-collapse:collapse;'>
+        <tr><th style='text-align:left;'>Category of Beneficiary</th><th>Beneficiary's Contribution (of project cost)</th><th>Rate of Subsidy (of project cost)</th></tr>
+        <tr><td>All Categories</td><td>10%</td><td>15% (20% in NER and Hill States)</td></tr>
+      </table>
+      <strong>Maximum Project Cost:</strong>
+      <ul>
+        <li>Manufacturing sector: ₹1.00 Crore (Maximum subsidy: ₹15 lakh, or ₹20 lakh for NER and Hill States).</li>
+        <li>Business/Service sector: ₹25 lakh (Maximum subsidy: ₹3.75 lakh, or ₹5 lakh for NER and Hill States).</li>
+      </ul>
+      <p><em>If the project cost exceeds these limits, banks may provide the balance without government subsidy.</em></p>
+    </div>
+
+    <div class="section-title">🏦 Bank Finance</div>
+    <div class="info-box">
+      <ul>
+        <li>Banks will sanction 90% of the project cost for General Category beneficiaries and 95% for Special Category beneficiaries, disbursing the full amount for project setup.</li>
+        <li>Financing can be in the form of term loan for Capital Expenditure and cash credit for Working Capital, or as a composite loan.</li>
+      </ul>
+    </div>
+
+    <div class="section-title">📊 Training & Other Support</div>
+    <div class="info-box">
+      <strong>Entrepreneurship Development Programme (EDP) Training:</strong> Mandatory training is provided to beneficiaries. This can be offline or through virtual classrooms, conducted by various recognized training centers.<br><br>
+      <strong>Backward and Forward Linkages:</strong> Funds are earmarked for activities like awareness camps, workshops, exhibitions, publicity, physical verification, and marketing support, including through KVIC's sales outlets and participation in trade fairs.<br><br>
+      <strong>Physical Verification:</strong> 100% physical verification with geo-tagging of established units is mandatory and conducted by KVIC through third-party agencies.
+    </div>
+
+    <div class="section-title">📈 Why It Matters</div>
+    <div class="why-matters">
+      <ul>
+        <li>Jump-start your venture with strong subsidy support</li>
+        <li>Lower your financial burden with flexible credit and no collateral</li>
+        <li>Promotes sustainable employment in rural & urban India</li>
+        <li>Catalyses business growth, especially among youth, women, and marginalized communities</li>
+      </ul>
+    </div>
+    <a href="index.html" class="back-btn">&#8592; Back to Home</a>
+  </div>
+</body>
+</html> 

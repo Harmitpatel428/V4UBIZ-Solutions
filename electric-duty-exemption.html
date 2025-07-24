@@ -625,6 +625,9 @@
 <body>
   <header>
     <div class="logo">V4UBiz Solutions</div>
+    <button class="hamburger" id="hamburgerMenu" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <nav>
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
@@ -634,6 +637,118 @@
     <div class="header-actions">
       <a href="index.html" class="modern-btn">Main Page</a>
     </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="#" class="active">Inquiry Form</a>
+      <a href="javascript:history.back()">Back</a>
+      <a href="index.html" class="modern-btn">Main Page</a>
+    </div>
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 44px;
+      height: 44px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1001;
+      margin-left: 1rem;
+    }
+    .hamburger span {
+      display: block;
+      width: 28px;
+      height: 3px;
+      margin: 4px 0;
+      background: var(--primary-dark);
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 80vw;
+      max-width: 320px;
+      height: 100vh;
+      background: #fff;
+      box-shadow: -2px 0 16px rgba(80,80,120,0.13);
+      padding: 2rem 1rem;
+      z-index: 2000;
+      align-items: flex-start;
+      gap: 1.2rem;
+      border-top-left-radius: 18px;
+      border-bottom-left-radius: 18px;
+      transition: transform 0.3s cubic-bezier(0.77,0,0.18,1);
+      transform: translateX(100%);
+    }
+    .mobile-menu.open {
+      display: flex !important;
+      transform: translateX(0);
+    }
+    .mobile-menu a {
+      font-size: 1.1rem;
+      padding: 0.7rem 1.5rem;
+      width: 90%;
+      text-align: center;
+      border-radius: 8px;
+      display: block;
+    }
+    @media (max-width: 1018px) {
+      nav, .header-actions {
+        display: none !important;
+      }
+      .hamburger {
+        display: flex !important;
+        position: absolute;
+        right: 1.2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 0;
+      }
+      .mobile-menu {
+        display: none;
+      }
+      .mobile-menu.open {
+        display: flex !important;
+      }
+      header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0.7rem 1vw;
+        height: auto;
+        position: relative;
+      }
+      .logo {
+        font-size: 1.3rem;
+        margin-bottom: 0;
+      }
+    }
+</style>
+<script>
+  (function() {
+    const hamburger = document.getElementById('hamburgerMenu');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener('click', function() {
+        const isOpen = mobileMenu.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', isOpen);
+      });
+      // Close menu when any link clicked
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', false);
+        });
+      });
+    }
+  })();
+</script>
   </header>
   </section>
   <form class="main-form" id="mainForm">

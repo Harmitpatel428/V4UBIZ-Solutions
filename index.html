@@ -778,6 +778,7 @@
     .hamburger {
       z-index: 2100;
     }
+    
   </style>
 </head>
 
@@ -968,6 +969,33 @@
     </div>
   </div>
   <style>
+    /* Fix close button overlap in overlay */
+.services-overlay-content {
+  position: relative;
+  padding-top: 4rem; /* Adds space for the close button */
+}
+
+.close-overlay {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  line-height: 1;
+  z-index: 10;
+  background: #fff;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(108,71,255,0.12);
+  cursor: pointer;
+}
+.close-overlay:hover {
+  background: #f3f3f3;
+}
+
     .logo-slider-container {
       position: fixed;
       left: 0;
@@ -1017,127 +1045,107 @@
       .logo-slider-track { gap: 18px; }
       body { margin-bottom: 70px; }
     }
+    
   </style>
-  <script>
-    // Slide-down overlay for Services with browser history management
-    document.addEventListener('DOMContentLoaded', function() {
-      const servicesBtn = document.querySelector('nav a[href="#services"]');
-      const overlay = document.getElementById('servicesOverlay');
-      const closeBtn = document.getElementById('closeServicesOverlay');
-      // Helper to open/close overlay
-      function openOverlay(push) {
-        overlay.classList.add('open');
-        document.body.style.overflow = 'hidden';
-        if (push) {
-          const url = new URL(window.location);
-          url.searchParams.set('services', 'open');
-          window.history.pushState({services: 'open'}, '', url);
-        }
-      }
-      function closeOverlay(pop) {
-        overlay.classList.remove('open');
-        document.body.style.overflow = '';
-        if (!pop) {
-          // Only go back if closing via button, not popstate
-          if (window.location.search.includes('services=open')) {
-            window.history.back();
-          }
-        }
-      }
-      // Open overlay if URL has ?services=open
-      function checkOverlayFromURL() {
-        if (window.location.search.includes('services=open')) {
-          openOverlay(false);
-        } else {
-          overlay.classList.remove('open');
-          document.body.style.overflow = '';
-        }
-      }
-      if (servicesBtn && overlay && closeBtn) {
-        servicesBtn.addEventListener('click', function(e) {
-          e.preventDefault();
-          openOverlay(true);
-        });
-        closeBtn.addEventListener('click', function() {
-          closeOverlay(false);
-        });
-        overlay.addEventListener('click', function(e) {
-          if (e.target === overlay) {
-            closeOverlay(false);
-          }
-        });
-        // Listen for browser navigation
-        window.addEventListener('popstate', function() {
-          checkOverlayFromURL();
-        });
-        // On page load
-        checkOverlayFromURL();
-      }
+<script>
+  // Hamburger menu toggle
+  const hamburger = document.getElementById('hamburgerMenu');
+  const mobileMenu = document.getElementById('mobileMenu');
 
-      // Smooth scroll to Contact section only
-      const contactBtn = document.querySelector('nav a[href="#contact"]');
-      const contactSection = document.getElementById('contact');
-      if (contactBtn && contactSection) {
-        contactBtn.addEventListener('click', function(e) {
-          e.preventDefault();
-          contactSection.scrollIntoView({ behavior: 'smooth' });
-        });
-      }
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', function() {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen);
     });
 
-    // Ripple effect for buttons
-    document.querySelectorAll('.modern-btn').forEach(btn => {
-      btn.addEventListener('click', function(e) {
-        const ripple = document.createElement('span');
-        ripple.className = 'ripple';
-        const rect = btn.getBoundingClientRect();
-        ripple.style.left = (e.clientX - rect.left) + 'px';
-        ripple.style.top = (e.clientY - rect.top) + 'px';
-        ripple.style.width = ripple.style.height = Math.max(rect.width, rect.height) + 'px';
-        btn.appendChild(ripple);
-        setTimeout(() => ripple.remove(), 600);
+    // Close menu when any link clicked
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', false);
       });
     });
+  }
 
-    // Scroll to top button
-    const scrollTopBtn = document.getElementById('scrollTopBtn');
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 300) {
-        scrollTopBtn.classList.add('show');
-      } else {
-        scrollTopBtn.classList.remove('show');
-      }
-    });
-    scrollTopBtn.addEventListener('click', function() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+  // Overlay functionality for desktop and mobile
+  const overlay = document.getElementById('servicesOverlay');
+  const closeBtn = document.getElementById('closeServicesOverlay');
 
-    // Parallax effect for hero
-    const hero = document.querySelector('.hero.parallax');
-    if (hero) {
-      window.addEventListener('scroll', function() {
-        const y = window.scrollY * 0.25;
-        hero.style.backgroundPosition = `center ${y}px`;
-      });
+  function openOverlay(push) {
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    if (push) {
+      const url = new URL(window.location);
+      url.searchParams.set('services', 'open');
+      window.history.pushState({services: 'open'}, '', url);
     }
-  </script>
-  <script>
-    // Hamburger menu functionality (standalone, last script)
-    const hamburger = document.getElementById('hamburgerMenu');
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (hamburger && mobileMenu) {
-      hamburger.addEventListener('click', function() {
-        const isOpen = mobileMenu.classList.toggle('open');
-        hamburger.setAttribute('aria-expanded', isOpen);
-      });
-      mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          mobileMenu.classList.remove('open');
-          hamburger.setAttribute('aria-expanded', false);
-        });
-      });
+  }
+
+  function closeOverlay(pop) {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+    if (!pop && window.location.search.includes('services=open')) {
+      window.history.back();
     }
-  </script>
+  }
+
+  function checkOverlayFromURL() {
+  if (window.location.search.includes('services=open')) {
+    overlay.classList.remove('open'); // reset state
+    requestAnimationFrame(() => {
+      overlay.classList.add('open'); // re-add to trigger animation
+    });
+    document.body.style.overflow = 'hidden';
+  } else {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+  // Desktop Services link
+  const desktopServicesLink = document.querySelector('nav a[href="#services"]');
+  if (desktopServicesLink) {
+    desktopServicesLink.addEventListener('click', e => {
+      e.preventDefault();
+      openOverlay(true);
+    });
+  }
+
+  // Mobile Services link
+  const mobileServicesLink = document.querySelector('.mobile-menu a[href="#services"]');
+  if (mobileServicesLink) {
+    mobileServicesLink.addEventListener('click', e => {
+      e.preventDefault();
+      openOverlay(true);
+    });
+  }
+
+  // Close overlay events
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => closeOverlay(false));
+  }
+  if (overlay) {
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) closeOverlay(false);
+    });
+  }
+
+  // Handle back/forward buttons
+  window.addEventListener('popstate', () => checkOverlayFromURL());
+  checkOverlayFromURL();
+
+  // Smooth scroll for Contact link (both menus)
+  const contactLinks = document.querySelectorAll('a[href="#contact"]');
+  const contactSection = document.getElementById('contact');
+  if (contactLinks && contactSection) {
+    contactLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  }
+</script>
+
 </body>
 
 </html>

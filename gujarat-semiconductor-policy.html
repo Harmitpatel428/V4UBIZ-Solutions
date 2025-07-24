@@ -292,7 +292,18 @@
         <li>Creates deep-tech jobs, startups, and exports from Gujarat</li>
       </ul>
     </div>
-    <a href="index.html" class="back-btn">&#8592; Back to Home</a>
+    <a href="#" class="back-btn" onclick="goBack()">&#8592; Back</a>
   </div>
+  <script>
+    function goBack() {
+      if (document.referrer.includes('index.html')) {
+        // Go back to previous page (overlay state)
+        window.history.back();
+      } else {
+        // Fallback: open services overlay
+        window.location.href = 'index.html?services=open';
+      }
+    }
+  </script>   
 </body>
-</html> 
+</html>

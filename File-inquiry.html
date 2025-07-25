@@ -5,13 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>File Inquiry | V4U Biz Solutions</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-  (function() {
-    emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS Public Key
-  })();
-</script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    
+  </script>
 
   <style>
     :root {
@@ -881,40 +877,24 @@
         </div>
       </div>
       <button type="submit" class="submit-btn">Submit</button>
-      <script>
-        // Add form submission handler to send data to Gmail via EmailJS
-        document.addEventListener('DOMContentLoaded', function() {
-          const form = document.querySelector('form');
-          form.addEventListener('submit', function(e) {
-            e.preventDefault();
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('mainForm');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
 
-            // Collect form data
-            const formData = new FormData(form);
-            let body = '';
-            for (let [key, value] of formData.entries()) {
-              body += `<b>${key}:</b> ${value}<br>`;
-            }
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', '#mainForm')
+      .then(function(response) {
+        alert('✅ Form submitted successfully! We have received your details.');
+        form.reset();
+      }, function(error) {
+        alert('❌ Error sending form. Please try again.');
+        console.error(error);
+      });
+  });
+});
+</script>
 
-            // Use EmailJS to send email (user must configure their own EmailJS account)
-            // You need to sign up at https://www.emailjs.com/ and replace the following:
-            // service_xxx, template_xxx, and user_xxx with your actual EmailJS IDs.
-            // This is a client-side solution as direct Gmail sending is not possible from browser.
-            emailjs.init('QwQwQwQwQwQwQwQwQ'); // Replace with your EmailJS user ID
-
-            emailjs.send('service_xxx', 'template_xxx', {
-              to_email: 'harmitpatel428@gmail.com',
-              message_html: body,
-              from_name: formData.get('firstName') || 'Form User'
-            })
-            .then(function(response) {
-              alert('Form submitted successfully! We have received your details.');
-              form.reset();
-            }, function(error) {
-              alert('There was an error sending your form. Please try again later.');
-            });
-          });
-        });
-      </script>
     </div>
   </form>
   <footer>

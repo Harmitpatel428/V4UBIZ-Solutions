@@ -484,7 +484,7 @@
   </header>
   
 <main>
-  <form class="main-form" id="mainForm">
+  <form class="main-form" id="mainForm" action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST">
     <div class="form-section-title">Basic Details</div>
     <div class="form-row">
       <div class="form-group">
@@ -736,74 +736,5 @@
     });
   </script>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const mainForm = document.getElementById('mainForm');
-      if (mainForm) {
-        mainForm.addEventListener('submit', function(event) {
-          event.preventDefault(); // Prevent default form submission
-
-          // --- Gather data from all form fields ---
-          const firstName = document.getElementById('firstName')?.value || 'N/A';
-          const contactNumber = document.getElementById('moNo')?.value || 'N/A';
-          const companyName = document.getElementById('companyName')?.value || 'N/A';
-          const companyType = document.getElementById('companyType')?.value || 'N/A';
-          const activity = document.getElementById('activity')?.value || 'N/A';
-          const constitution = document.getElementById('constitution')?.value || 'N/A';
-          const land = document.getElementById('land')?.value || 'N/A';
-          const electricityLoad = document.getElementById('electricityLoad')?.value || 'N/A';
-          const electricityOnName = document.getElementById('electricityOnName')?.value || 'N/A';
-          const termloan = document.getElementById('termloan')?.value || 'N/A';
-          const plantCost = document.getElementById('plantCost')?.value || 'N/A';
-          const dateOfProduction = document.getElementById('dateOfProduction')?.value || 'N/A';
-          const rawMaterial = document.getElementById('rawMaterial')?.value || 'N/A';
-          const finishGood = document.getElementById('finishGood')?.value || 'N/A';
-          
-          // --- Construct the email body ---
-          let body = `You have a new inquiry with the following details:\n\n`;
-          body += `== Basic Details ==\n`;
-          body += `First Name: ${firstName}\n`;
-          body += `Contact Number: ${contactNumber}\n`;
-          body += `Company Name: ${companyName}\n`;
-          body += `Company Type: ${companyType}\n`;
-          body += `Activity: ${activity}\n`;
-          body += `Type Of Constitution: ${constitution}\n`;
-          body += `Land: ${land}\n`;
-          body += `Electricity Load: ${electricityLoad} KVA\n`;
-          body += `Electricity Connection Holder Name: ${electricityOnName}\n\n`;
-
-          body += `== Subsidy & Loan Details ==\n`;
-          body += `Term Loan Required?: ${termloan}\n`;
-
-          // Only include term loan specific fields if 'yes' is selected
-          if (termloan.toLowerCase() === 'yes') {
-              const district = document.getElementById('district')?.value || 'N/A';
-              const taluka = document.getElementById('taluka')?.value || 'N/A';
-              const talukaCategory = document.getElementById('talukaCategory')?.value || 'N/A';
-              const termLoanAmount = document.getElementById('termLoanAmount')?.value || 'N/A';
-              const buildingCost = document.getElementById('buildingCost')?.value || 'N/A';
-              
-              body += `District: ${district}\n`;
-              body += `Taluka: ${taluka}\n`;
-              body += `Taluka Category: ${talukaCategory}\n`;
-              body += `Term Loan Amount: ${termLoanAmount}\n`;
-              body += `Building Cost: ${buildingCost}\n`;
-          }
-          
-          body += `Plant & Machinery Cost: ${plantCost}\n`;
-          body += `Date Of Commercial Production: ${dateOfProduction}\n`;
-          body += `Raw Material: ${rawMaterial}\n`;
-          body += `Finish Good Name: ${finishGood}\n`;
-
-          // --- Create and trigger the mailto link ---
-          const subject = `New Inquiry from ${firstName} - ${companyName}`;
-          const mailtoLink = `mailto:v4ubizsolutions@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-          // Navigate to the mailto link
-          window.location.href = mailtoLink;
-        });
-      }
-    });
-  </script>
 </body>
 </html>

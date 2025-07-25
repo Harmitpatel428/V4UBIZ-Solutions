@@ -886,6 +886,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('mainForm');
+
   form.addEventListener('submit', function(e) {
     e.preventDefault();
 
@@ -895,7 +896,7 @@ document.addEventListener('DOMContentLoaded', function() {
         form.reset();
       }, function(error) {
         alert('❌ Error sending form. Please try again.');
-        console.error(error);
+        console.error('EmailJS Error:', error);
       });
   });
 });
